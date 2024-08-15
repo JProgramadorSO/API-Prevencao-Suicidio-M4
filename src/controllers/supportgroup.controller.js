@@ -36,7 +36,7 @@ export const updateGroup = async (req, res) => {
     const group = await Group.findByPk(req.params.id);
     if (group) {
       await group.update(req.body);
-      res.status(200).json({ message: 'Group updated successfully', group });
+      res.status(200).json({ message: 'Group updated successfully!', group });
     } else {
       res.status(404).json({ error: 'Group not found' });
     }
